@@ -1,0 +1,27 @@
+package com.wise.openapidemo.service;
+
+import com.wise.openapidemo.uuid.api.UuidApi;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestClientException;
+
+import java.util.List;
+
+@Slf4j
+@Service
+@RequiredArgsConstructor
+public class UuidService {
+
+    private final UuidApi uuidGeneratorApi;
+
+    public List<String> getUuids() {
+        try {
+            return uuidGeneratorApi.generateUuid(4);
+        } catch (RestClientException restClientException) {
+            // TODO handle exceptions here
+            log.warn(restClientException.getMessage(), restClientException);
+            return List.of("not-so-unique");
+        }
+    }
+}
