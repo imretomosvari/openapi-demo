@@ -18,7 +18,7 @@ In the PoC project instead of depending on the separate artifact created from th
 
 ## Frontend use
 
-The openapi generator used in the PoC is capable of creating clients for many languages and frameworks, however frontend developers often chose [NSwag](https://github.com/RicoSuter/NSwag) (an other genertor inatead). It is better in generating code for Angular projects.
+The openapi generator used in the PoC is capable of creating clients for many languages and frameworks, however frontend developers often chose [NSwag](https://github.com/RicoSuter/NSwag) (an other genertor) instead. It is better in generating code for Angular projects.
 
 ## How to try out this PoC
 
