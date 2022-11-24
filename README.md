@@ -27,5 +27,5 @@ Just clone the repo and run the ```bootRun``` gradle task. The code will be gene
 There is an endpoint (generated) which is implemented in the PetStoreController. The delete pet method calls the UUID API using the also generated client code. So by calling the following, you can try out both the server and client generated parts.
 
 ```shell
-curl --location --request DELETE 'http://localhost:8080/pet/12'
+curl --location -H 'Content-Type: application/json' -H 'Accept: application/json' --request GET 'http://localhost:8080/pet/12'
 ```

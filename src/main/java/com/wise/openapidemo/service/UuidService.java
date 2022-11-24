@@ -13,11 +13,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UuidService {
 
-    private final UuidApi uuidGeneratorApi;
+    private final UuidApi uuidApi;
 
     public List<String> getUuids() {
         try {
-            return uuidGeneratorApi.generateUuid(4);
+            return uuidApi.generateUuid(4);
         } catch (RestClientException restClientException) {
             // TODO handle exceptions here
             log.warn(restClientException.getMessage(), restClientException);

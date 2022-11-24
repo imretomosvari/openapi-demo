@@ -1,17 +1,17 @@
 import org.openapitools.generator.gradle.plugin.tasks.GenerateTask
 
 plugins {
-    id 'org.springframework.boot' version '2.5.2'
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'org.springframework.boot' version '2.7.5'
+    id 'io.spring.dependency-management' version '1.1.0'
     id 'java'
 
     // applying the openapi generator plugin
-    id "org.openapi.generator" version "5.2.0"
+    id "org.openapi.generator" version "6.2.1"
 }
 
 group = 'com.wise'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '16'
+sourceCompatibility = '17'
 
 // adding the generated sources to the source sets
 sourceSets.main.java.srcDirs += 'build/generated/petstore/src/main/java'
@@ -36,9 +36,9 @@ dependencies {
     // required for generated openapi stuff
     implementation "javax.validation:validation-api:2.0.1.Final"
     implementation "io.springfox:springfox-swagger2:3.0.0"
-    implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
+    implementation 'org.openapitools:jackson-databind-nullable:0.2.4'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'
-    annotationProcessor "io.swagger:swagger-annotations:1.6.2"
+    annotationProcessor 'io.swagger:swagger-annotations:1.6.8'
 }
 
 // 2 new tasks to generate the client and server code

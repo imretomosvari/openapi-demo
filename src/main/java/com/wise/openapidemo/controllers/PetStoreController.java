@@ -18,14 +18,18 @@ public class PetStoreController implements PetApi {
 
     private final UuidService uuidService;
 
-
     @Override
     public ResponseEntity<Pet> getPetById(Long petId) {
         log.info("FOUND");
 
+        List<String> uuids = uuidService.getUuids();
+        for (String uuid : uuids) {
+            log.info("UUID: {}", uuid);
+        }
+
         var foundPet = new Pet();
         foundPet.setId(1L);
-        foundPet.setName("Beethoven");
+        foundPet.setName("Beethoven - " + uuids.get(0));
 
         return ResponseEntity.ok(foundPet);
     }
@@ -39,11 +43,6 @@ public class PetStoreController implements PetApi {
     @Override
     public ResponseEntity<Void> deletePet(Long petId, String apiKey) {
         log.info("DELETED");
-        List<String> uuids = uuidService.getUuids();
-        for (String uuid : uuids) {
-            log.info(uuid);
-        }
-
         return ResponseEntity.ok().build();
     }
 }
