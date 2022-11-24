@@ -6,7 +6,7 @@ This PoC application demonstrates the usage of OpenAPI descriptors and the [open
 
 For the code generation to work there must be OpenAPI descriptors available. These should represent a contract between services, fontend-backend etc. on how the API looks like.
 
-The ```build.gradle``` file is commented to highlight the necessary modifications to enable code generation. generation can be used to create client and server code as well. This example application implements the API described in ```petstore.yml``` and consumes an API described by ```uuid.yml```. The business logic is nonsense, the goal of the PoC is to demonstrate the code generation, and the basic usage of the generated code.
+The ```build.gradle``` file is commented to highlight the necessary modifications to enable code generation. Generation can be used to create client and server code as well. This example application implements the API described in ```petstore.yml``` and consumes an API described by ```uuid.yml```. The business logic is nonsense, the goal of the PoC is to demonstrate the code generation, and the basic usage of the generated code.
 
 ## Code generation on the backend
 
@@ -18,7 +18,7 @@ In the PoC project instead of depending on the separate artifact created from th
 
 ## Frontend use
 
-The openapi generator used in the PoC is capable of creating clients for many languages and frameworks, however frontend developers often chose [NSwag](https://github.com/RicoSuter/NSwag) (an other genertor inatead). It is better in generating code for Angular projects.
+The openapi generator used in the PoC is capable of creating clients for many languages and frameworks, however frontend developers often choose [NSwag](https://github.com/RicoSuter/NSwag) (an other genertor) instead. It is better in generating code for Angular projects.
 
 ## How to try out this PoC
 
